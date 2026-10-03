@@ -1,0 +1,15 @@
+{
+  "name": "ai-handoff-platform",
+  "version": "1.0.0",
+  "description": "AI Handoff - Context Recovery Assistant (MERN Stack Full-Stack MVP)",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "start": "cd server && node server.js"
+  },
+  "keywords": ["ai-handoff", "context-recovery", "mern", "project-management", "react", "express"],
+  "author": "M. Durga",
+  "license": "MIT"
+}

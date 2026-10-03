@@ -1,0 +1,607 @@
+{
+  "users": [],
+  "projects": [
+    {
+      "_id": "id_n7ysobxvbmunwaam2",
+      "id": "id_9fj9yrw25munwaam2",
+      "createdAt": "2026-09-30T09:20:30.266Z",
+      "updatedAt": "2026-10-03T05:36:15.594Z",
+      "userId": "demo_user_divya",
+      "name": "SmartClinic Management Platform",
+      "description": "HIPAA-compliant telemedicine, electronic health record (EHR) sync, and automated patient consultation billing portal.",
+      "projectType": "Healthcare SaaS Platform",
+      "status": "On Track",
+      "teamMembers": [
+        "Alex Rivers (Backend Lead)",
+        "Sarah Chen (Data Architect)",
+        "Elena Rostova (Frontend)",
+        "Michael Vance (Security Officer)"
+      ],
+      "startDate": "2026-09-01",
+      "endDate": "2026-12-31",
+      "progress": 40,
+      "handoffReadiness": {
+        "score": 95,
+        "status": "Ready",
+        "missingContext": [
+          "All critical context points documented and verified"
+        ]
+      },
+      "summary": "AI Context reconstructed across 4 ingested documents. Detected 5 total tasks and verified 2 completed deliverables with source traceability.",
+      "currentSituation": "Reconstruction complete. Readiness assessment is currently Ready (95% confidence).",
+      "isDemo": true
+    }
+  ],
+  "documents": [
+    {
+      "_id": "id_vr9rcvz9ymunwaama",
+      "id": "id_d7m80tfa9munwaama",
+      "createdAt": "2026-09-30T09:20:30.274Z",
+      "updatedAt": "2026-10-03T05:36:15.584Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "name": "Sprint_24_Meeting_Notes.txt",
+      "fileType": "TXT",
+      "category": "Meeting Notes",
+      "extractedText": "SmartClinic Sprint 24 Sync - Date: Oct 24, 2026\nAttendees: Alex Rivers, Sarah Chen, Elena Rostova\n\n1. Payment Gateway:\nPayment integration is blocked until the client confirms the provider. Dr. Harrison expressed security concerns regarding HIPAA compliance and processing fees.\n\n2. E-Prescription:\nElena noted that we still lack sandbox API credentials for the external pharmacy bridge.\n\n3. Action Items:\n- Escalate payment provider sign-off to executive client sponsor.\n- Prepare fallback architecture diagram for Stripe vs PayPal Braintree.",
+      "chunks": [
+        {
+          "page": 1,
+          "section": "Meeting Summary & Blockers",
+          "content": "Payment integration is blocked until the client confirms the provider. Dr. Harrison expressed security concerns regarding HIPAA compliance."
+        },
+        {
+          "page": 1,
+          "section": "Action Items",
+          "content": "Escalate payment provider sign-off to executive client sponsor."
+        }
+      ],
+      "processingStatus": "Completed",
+      "pageCount": 1,
+      "lineCount": 18,
+      "fileSize": "4.2 KB"
+    },
+    {
+      "_id": "id_shxh4fy71munwaamc",
+      "id": "id_syxkr5bszmunwaamc",
+      "createdAt": "2026-09-30T09:20:30.276Z",
+      "updatedAt": "2026-10-03T05:36:15.587Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "name": "Project_Tasks_Backlog.csv",
+      "fileType": "CSV",
+      "category": "Task List",
+      "extractedText": "TaskID,Title,Assignee,Priority,Status,Deadline,Dependencies\nTSK-101,PostgreSQL Schema Migration,Sarah Chen,High,Completed,2026-10-10,None\nTSK-102,HIPAA AES-256 Field Encryption,Michael Vance,High,Completed,2026-10-18,TSK-101\nTSK-103,Stripe Payment Gateway Integration,Alex Rivers,High,In Progress,2026-11-15,TSK-102\nTSK-104,E-Prescription SureScripts Bridge,Elena Rostova,Medium,Not Started,2026-12-01,TSK-103\nTSK-105,Automated Patient SMS Reminders,Unassigned,Low,Not Started,2026-12-10,None",
+      "chunks": [
+        {
+          "page": 1,
+          "section": "Active Sprint Tasks",
+          "content": "TSK-103, Stripe Payment Gateway Integration, Alex Rivers, High Priority, In Progress, Deadline: 2026-11-15"
+        },
+        {
+          "page": 1,
+          "section": "Completed Deliverables",
+          "content": "TSK-101 Database Migration (Sarah Chen), TSK-102 HIPAA Encryption (Michael Vance)"
+        }
+      ],
+      "processingStatus": "Completed",
+      "pageCount": 1,
+      "lineCount": 6,
+      "fileSize": "2.8 KB"
+    },
+    {
+      "_id": "id_z9710mabhmunwaame",
+      "id": "id_mmk5kx67pmunwaame",
+      "createdAt": "2026-09-30T09:20:30.278Z",
+      "updatedAt": "2026-10-03T05:36:15.590Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "name": "Client_Direct_Approval.docx",
+      "fileType": "DOCX",
+      "category": "Client Communication",
+      "extractedText": "MEMORANDUM - SmartClinic Healthcare Systems\nDate: Oct 28, 2026\nFrom: Dr. Robert Harrison, Chief Medical Informatics Officer\nTo: SmartClinic Product Team\nSubject: Formal Approval of Payment Gateway Provider\n\nFollowing our review with the compliance and financial audit committee, Stripe has been approved as the payment provider for all clinics. Dr. Harrison confirmed the Business Associate Agreement (BAA) meets our strict HIPAA guidelines. The team is authorized to proceed with live checkout integrations immediately. Please ensure readiness for launch on or before November 15, 2026.",
+      "chunks": [
+        {
+          "page": 1,
+          "section": "Formal Approval",
+          "content": "Stripe has been approved as the payment provider for all clinics. The team is authorized to proceed with live checkout integrations immediately."
+        },
+        {
+          "page": 1,
+          "section": "Deadline Notice",
+          "content": "Please ensure readiness for launch on or before November 15, 2026."
+        }
+      ],
+      "processingStatus": "Completed",
+      "pageCount": 2,
+      "lineCount": 16,
+      "fileSize": "18.5 KB"
+    },
+    {
+      "_id": "id_pptc9wfzfmunwaamg",
+      "id": "id_axi4gt0h8munwaamg",
+      "createdAt": "2026-09-30T09:20:30.280Z",
+      "updatedAt": "2026-10-03T05:36:15.592Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "name": "Architecture_Handoff_Spec.pdf",
+      "fileType": "PDF",
+      "category": "Technical Documentation",
+      "extractedText": "SmartClinic Technical Architecture Specification v2.4\nLead Architect: Sarah Chen | Security Review: Michael Vance\n\nSection 1: Data Persistence Architecture\nAll patient consultation records and diagnostic logs must use AES-256 column-level encryption with keys managed in AWS KMS. Database migration to PostgreSQL completed on Oct 10, 2026, retiring legacy MongoDB storage to ensure ACID isolation for billing transactions.\n\nSection 2: Payment Webhook Security\nWebhook endpoints must verify the Stripe HMAC signature header using secret rotation every 90 days. Failed payment events trigger immediate SMS notifications to clinic administrators.",
+      "chunks": [
+        {
+          "page": 1,
+          "section": "Data Persistence Architecture",
+          "content": "All patient consultation records must use AES-256 encryption. Database migration to PostgreSQL completed on Oct 10, 2026."
+        },
+        {
+          "page": 2,
+          "section": "Payment Webhook Security",
+          "content": "Webhook endpoints must verify the Stripe HMAC signature header using secret rotation."
+        }
+      ],
+      "processingStatus": "Completed",
+      "pageCount": 4,
+      "lineCount": 32,
+      "fileSize": "142 KB"
+    }
+  ],
+  "tasks": [
+    {
+      "_id": "id_ds3rho86gmunwaamj",
+      "id": "id_s4j5tpv3pmunwaamj",
+      "createdAt": "2026-09-30T09:20:30.283Z",
+      "updatedAt": "2026-09-30T09:20:31.739Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "PostgreSQL Schema Migration & Data Pipeline",
+      "description": "Migrated patient records and relational tables to PostgreSQL for strict ACID compliance.",
+      "status": "Completed",
+      "priority": "High",
+      "assignee": "Sarah Chen",
+      "deadline": "2026-10-10",
+      "completedDate": "2026-09-30",
+      "dependencies": [],
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "Database migration to PostgreSQL completed on Oct 10, 2026, retiring legacy MongoDB storage.",
+      "pageNumber": 1,
+      "section": "Data Persistence Architecture"
+    },
+    {
+      "_id": "id_fq3efitc7munwaaml",
+      "id": "id_3rtyhwnufmunwaaml",
+      "createdAt": "2026-09-30T09:20:30.285Z",
+      "updatedAt": "2026-09-30T09:20:30.285Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "HIPAA AES-256 Field Encryption",
+      "description": "Implement column-level cryptographic hashing and AWS KMS key envelope encryption for patient consultation logs.",
+      "status": "Completed",
+      "priority": "High",
+      "assignee": "Michael Vance",
+      "deadline": "2026-10-18",
+      "completedDate": "2026-10-18",
+      "dependencies": [
+        "PostgreSQL Schema Migration"
+      ],
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "All patient consultation records and diagnostic logs must use AES-256 column-level encryption.",
+      "pageNumber": 1,
+      "section": "Data Persistence Architecture"
+    },
+    {
+      "_id": "id_gby8mixbxmunwaamm",
+      "id": "id_ntio0jkwlmunwaamm",
+      "createdAt": "2026-09-30T09:20:30.286Z",
+      "updatedAt": "2026-09-30T09:20:30.286Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Stripe Payment Gateway Integration",
+      "description": "Build checkout session API, webhook handlers for invoice payment success, and recurring doctor subscription tiers.",
+      "status": "In Progress",
+      "priority": "High",
+      "assignee": "Alex Rivers",
+      "deadline": "2026-11-15",
+      "dependencies": [
+        "HIPAA AES-256 Field Encryption"
+      ],
+      "sourceDocumentId": "id_z9710mabhmunwaame",
+      "sourceDocumentName": "Client_Direct_Approval.docx",
+      "sourceExcerpt": "Stripe has been approved as the payment provider for all clinics. The team is authorized to proceed with live checkout integrations immediately.",
+      "pageNumber": 1,
+      "section": "Formal Approval"
+    },
+    {
+      "_id": "id_t17bm9kzkmunwaamq",
+      "id": "id_yxhy1ndt3munwaamq",
+      "createdAt": "2026-09-30T09:20:30.290Z",
+      "updatedAt": "2026-09-30T09:20:30.290Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "E-Prescription SureScripts Bridge",
+      "description": "Connect EHR system with national pharmacy fulfillment networks via SureScripts API.",
+      "status": "Not Started",
+      "priority": "Medium",
+      "assignee": "Elena Rostova",
+      "deadline": "2026-12-01",
+      "dependencies": [
+        "Stripe Payment Gateway Integration"
+      ],
+      "sourceDocumentId": "id_vr9rcvz9ymunwaama",
+      "sourceDocumentName": "Sprint_24_Meeting_Notes.txt",
+      "sourceExcerpt": "Elena noted that we still lack sandbox API credentials for the external pharmacy bridge.",
+      "pageNumber": 1,
+      "section": "Meeting Summary"
+    },
+    {
+      "_id": "id_1wlwxmd9vmunwaams",
+      "id": "id_4jafg9xuvmunwaams",
+      "createdAt": "2026-09-30T09:20:30.292Z",
+      "updatedAt": "2026-09-30T09:20:30.292Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Automated Patient SMS Reminders",
+      "description": "Configure automated SMS notifications for upcoming teleconsultations and follow-ups.",
+      "status": "Not Started",
+      "priority": "Low",
+      "assignee": "Unassigned",
+      "deadline": "2026-12-10",
+      "dependencies": [],
+      "sourceDocumentId": "id_shxh4fy71munwaamc",
+      "sourceDocumentName": "Project_Tasks_Backlog.csv",
+      "sourceExcerpt": "TSK-105, Automated Patient SMS Reminders, Unassigned, Low, Not Started, 2026-12-10",
+      "pageNumber": 1,
+      "section": "Active Sprint Tasks"
+    }
+  ],
+  "decisions": [
+    {
+      "_id": "id_mxpt32ozbmunwaamu",
+      "id": "id_5yy5j1byrmunwaamu",
+      "createdAt": "2026-09-30T09:20:30.294Z",
+      "updatedAt": "2026-09-30T09:20:30.294Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Adopt Stripe as Primary Healthcare Payment Provider",
+      "description": "Official selection of Stripe for processing patient co-pays and clinic subscriptions.",
+      "reason": "Client audit confirmed Stripe Business Associate Agreement (BAA) meets HIPAA compliance standards, and provides native webhook redundancy.",
+      "decisionDate": "2026-10-28",
+      "decisionMaker": "Dr. Robert Harrison (CMIO) & Security Audit Committee",
+      "sourceDocumentId": "id_z9710mabhmunwaame",
+      "sourceDocumentName": "Client_Direct_Approval.docx",
+      "sourceExcerpt": "Following our review with the compliance and financial audit committee, Stripe has been approved as the payment provider for all clinics.",
+      "pageNumber": 1,
+      "whyMadeExcerpts": [
+        "Sprint_24_Meeting_Notes: \"Payment integration is blocked until the client confirms the provider. Dr. Harrison expressed security concerns.\"",
+        "Client_Direct_Approval: \"Dr. Harrison confirmed the Business Associate Agreement (BAA) meets our strict HIPAA guidelines.\""
+      ]
+    },
+    {
+      "_id": "id_mfwvrn7iqmunwaamw",
+      "id": "id_t7n3b5fbrmunwaamw",
+      "createdAt": "2026-09-30T09:20:30.296Z",
+      "updatedAt": "2026-09-30T09:20:30.296Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Transition Core Storage from MongoDB to PostgreSQL",
+      "description": "Architectural shift to relational schema for transactional patient records.",
+      "reason": "ACID transactional guarantees required for healthcare billing and consultation audit logs.",
+      "decisionDate": "2026-10-05",
+      "decisionMaker": "Sarah Chen (Data Architect)",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "Database migration to PostgreSQL completed on Oct 10, 2026, retiring legacy MongoDB storage to ensure ACID isolation for billing transactions.",
+      "pageNumber": 1,
+      "whyMadeExcerpts": [
+        "Architecture_Handoff_Spec: \"Ensure ACID isolation for billing transactions and strict patient relational integrity.\""
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "_id": "id_n43ghm9hpmunwaamy",
+      "id": "id_gxxlz0idnmunwaamy",
+      "createdAt": "2026-09-30T09:20:30.298Z",
+      "updatedAt": "2026-09-30T09:20:30.298Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Payment Integration Stalled on Vendor Sign-Off (RESOLVED)",
+      "description": "Sprint 24 identified blocker waiting for executive approval on payment gateway vendor.",
+      "severity": "High",
+      "status": "Resolved",
+      "detectedDate": "2026-10-24",
+      "relatedTask": "Stripe Payment Gateway Integration",
+      "suggestedAction": "Blocker resolved via Client_Direct_Approval.docx. Proceed directly with Stripe API checkout implementation.",
+      "sourceDocumentId": "id_vr9rcvz9ymunwaama",
+      "sourceDocumentName": "Sprint_24_Meeting_Notes.txt",
+      "sourceExcerpt": "Payment integration is blocked until the client confirms the provider.",
+      "pageNumber": 1
+    },
+    {
+      "_id": "id_md95ik43hmunwaan1",
+      "id": "id_i1alz170umunwaan1",
+      "createdAt": "2026-09-30T09:20:30.301Z",
+      "updatedAt": "2026-09-30T09:20:30.301Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Missing SureScripts Sandbox API Credentials",
+      "description": "Development of E-Prescription module cannot begin until clinic IT administrator grants sandbox credentials.",
+      "severity": "Medium",
+      "status": "Open",
+      "detectedDate": "2026-10-24",
+      "relatedTask": "E-Prescription SureScripts Bridge",
+      "suggestedAction": "Contact Dr. Harrison and IT operations lead to obtain OAuth keys before sprint 26 kickoff.",
+      "sourceDocumentId": "id_vr9rcvz9ymunwaama",
+      "sourceDocumentName": "Sprint_24_Meeting_Notes.txt",
+      "sourceExcerpt": "Elena noted that we still lack sandbox API credentials for the external pharmacy bridge.",
+      "pageNumber": 1
+    }
+  ],
+  "milestones": [
+    {
+      "_id": "id_8li7n21n8munwaan4",
+      "id": "id_0iuqiannemunwaan4",
+      "createdAt": "2026-09-30T09:20:30.304Z",
+      "updatedAt": "2026-09-30T09:20:30.304Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Core Data Engine & PostgreSQL Migration",
+      "description": "Relational data migration and schema validation completed.",
+      "milestoneDate": "2026-10-10",
+      "status": "Completed",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf"
+    },
+    {
+      "_id": "id_n5ubyzha7munwaan8",
+      "id": "id_746562qvzmunwaan8",
+      "createdAt": "2026-09-30T09:20:30.308Z",
+      "updatedAt": "2026-09-30T09:20:30.308Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "HIPAA Security & KMS Key Validation",
+      "description": "Audited AES-256 encryption across all consultation and diagnostic tables.",
+      "milestoneDate": "2026-10-18",
+      "status": "Completed",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf"
+    },
+    {
+      "_id": "id_e4stx22llmunwaanc",
+      "id": "id_7beiat7agmunwaanc",
+      "createdAt": "2026-09-30T09:20:30.312Z",
+      "updatedAt": "2026-09-30T09:20:30.312Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Stripe Payment Live Checkout Release",
+      "description": "Production release of patient co-pay checkout and clinic billing.",
+      "milestoneDate": "2026-11-15",
+      "status": "Upcoming",
+      "sourceDocumentId": "id_z9710mabhmunwaame",
+      "sourceDocumentName": "Client_Direct_Approval.docx"
+    },
+    {
+      "_id": "id_6k66bf2qtmunwaand",
+      "id": "id_nnc2rdvlkmunwaand",
+      "createdAt": "2026-09-30T09:20:30.313Z",
+      "updatedAt": "2026-09-30T09:20:30.313Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "E-Prescription Module Beta Launch",
+      "description": "End-to-end electronic prescription fulfillment network connection.",
+      "milestoneDate": "2026-12-01",
+      "status": "Upcoming",
+      "sourceDocumentId": "id_vr9rcvz9ymunwaama",
+      "sourceDocumentName": "Sprint_24_Meeting_Notes.txt"
+    }
+  ],
+  "timeline_events": [
+    {
+      "_id": "id_ekufk25ckmunwaanf",
+      "id": "id_dwhtx91g5munwaanf",
+      "createdAt": "2026-09-30T09:20:30.315Z",
+      "updatedAt": "2026-09-30T09:20:30.315Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Architectural Shift: PostgreSQL Selected",
+      "description": "Decision confirmed to migrate patient medical records to PostgreSQL.",
+      "eventDate": "2026-10-05",
+      "eventType": "Decision",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "Database migration to PostgreSQL completed on Oct 10, 2026.",
+      "relatedTask": "PostgreSQL Schema Migration",
+      "aiExplanation": "The team selected PostgreSQL over MongoDB to ensure ACID compliance for medical transactions."
+    },
+    {
+      "_id": "id_eeouv13sfmunwaanh",
+      "id": "id_u5j8ira4imunwaanh",
+      "createdAt": "2026-09-30T09:20:30.317Z",
+      "updatedAt": "2026-09-30T09:20:30.317Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Database Migration Completed",
+      "description": "All patient records successfully transferred and verified in PostgreSQL.",
+      "eventDate": "2026-10-10",
+      "eventType": "Milestone",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "Database migration to PostgreSQL completed on Oct 10, 2026.",
+      "relatedTask": "PostgreSQL Schema Migration",
+      "aiExplanation": "Core data foundation established on schedule."
+    },
+    {
+      "_id": "id_0y031m7uvmunwaanj",
+      "id": "id_z40zp3r6tmunwaanj",
+      "createdAt": "2026-09-30T09:20:30.319Z",
+      "updatedAt": "2026-09-30T09:20:30.319Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "HIPAA Audit & Field Encryption Verified",
+      "description": "Column encryption implemented with AWS KMS key envelope encryption.",
+      "eventDate": "2026-10-18",
+      "eventType": "Task Completed",
+      "sourceDocumentId": "id_pptc9wfzfmunwaamg",
+      "sourceDocumentName": "Architecture_Handoff_Spec.pdf",
+      "sourceExcerpt": "All patient consultation records and diagnostic logs must use AES-256 column-level encryption.",
+      "relatedTask": "HIPAA AES-256 Field Encryption",
+      "aiExplanation": "Mandatory healthcare regulatory compliance gate passed."
+    },
+    {
+      "_id": "id_w9ru7u3b4munwaanl",
+      "id": "id_yzyrpf3rbmunwaanl",
+      "createdAt": "2026-09-30T09:20:30.343Z",
+      "updatedAt": "2026-09-30T09:20:30.343Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Payment Integration Blocked in Sprint 24",
+      "description": "Sprint meeting recorded a blocker due to unconfirmed payment vendor.",
+      "eventDate": "2026-10-24",
+      "eventType": "Blocker Raised",
+      "sourceDocumentId": "id_vr9rcvz9ymunwaama",
+      "sourceDocumentName": "Sprint_24_Meeting_Notes.txt",
+      "sourceExcerpt": "Payment integration is blocked until the client confirms the provider.",
+      "relatedTask": "Stripe Payment Gateway Integration",
+      "aiExplanation": "Engineers paused gateway work pending vendor selection by client leadership."
+    },
+    {
+      "_id": "id_jri14u5rzmunwaaod",
+      "id": "id_tksvdq0idmunwaaod",
+      "createdAt": "2026-09-30T09:20:30.349Z",
+      "updatedAt": "2026-09-30T09:20:30.349Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Client Memo: Stripe Officially Approved & Blocker Resolved",
+      "description": "Dr. Robert Harrison transmitted formal approval for Stripe.",
+      "eventDate": "2026-10-28",
+      "eventType": "Blocker Resolved",
+      "sourceDocumentId": "id_z9710mabhmunwaame",
+      "sourceDocumentName": "Client_Direct_Approval.docx",
+      "sourceExcerpt": "Stripe has been approved as the payment provider for all clinics.",
+      "relatedTask": "Stripe Payment Gateway Integration",
+      "aiExplanation": "Cross-document reasoning connects Client Memo (Oct 28) with Sprint Notes (Oct 24), identifying that the payment blocker is now fully resolved."
+    },
+    {
+      "_id": "id_gyfaaz67dmunwaaq0",
+      "id": "id_3vchtqlcpmunwaaq0",
+      "createdAt": "2026-09-30T09:20:30.408Z",
+      "updatedAt": "2026-09-30T09:20:30.408Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "title": "Target Deadline: Stripe Payment Gateway Launch",
+      "description": "Target go-live date for Stripe checkout and webhooks.",
+      "eventDate": "2026-11-15",
+      "eventType": "Milestone",
+      "sourceDocumentId": "id_z9710mabhmunwaame",
+      "sourceDocumentName": "Client_Direct_Approval.docx",
+      "sourceExcerpt": "Please ensure readiness for launch on or before November 15, 2026.",
+      "relatedTask": "Stripe Payment Gateway Integration",
+      "aiExplanation": "Upcoming hard client deadline."
+    }
+  ],
+  "ai_insights": [
+    {
+      "_id": "id_ko2w15tpzmunwaaq3",
+      "id": "id_vz8g2pia9munwaaq3",
+      "createdAt": "2026-09-30T09:20:30.411Z",
+      "updatedAt": "2026-09-30T09:20:30.411Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "insightType": "ContextConnection",
+      "content": "Payment Blocker Resolution & Immediate Actionability",
+      "confidence": 96,
+      "evidenceChain": {
+        "evidence": "Sprint_24_Meeting_Notes (Oct 24): \"Payment integration is blocked until client confirms provider.\" vs Client_Direct_Approval (Oct 28): \"Stripe has been approved as the payment provider for all clinics.\"",
+        "interpretation": "The latest executive communication directly resolves the sprint blocker. The team can resume payment engineering without further approvals.",
+        "currentContext": "Payment integration is currently actionable. Assignee Alex Rivers is targeting Nov 15 for launch.",
+        "actionableStep": "Execute Stripe API webhook endpoints and configure development sandbox keys."
+      },
+      "sourceReferences": [
+        {
+          "documentId": "id_vr9rcvz9ymunwaama",
+          "documentName": "Sprint_24_Meeting_Notes.txt",
+          "page": 1,
+          "section": "Meeting Summary",
+          "excerpt": "Payment integration is blocked until the client confirms the provider."
+        },
+        {
+          "documentId": "id_z9710mabhmunwaame",
+          "documentName": "Client_Direct_Approval.docx",
+          "page": 1,
+          "section": "Formal Approval",
+          "excerpt": "Stripe has been approved as the payment provider for all clinics."
+        }
+      ]
+    },
+    {
+      "_id": "id_6qortg02kmunwaaq5",
+      "id": "id_pkkfwxodjmunwaaq5",
+      "createdAt": "2026-09-30T09:20:30.413Z",
+      "updatedAt": "2026-09-30T09:20:30.413Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "insightType": "Conflict",
+      "content": "Status Discrepancy: Sprint Notes vs Client Direct Authorization",
+      "confidence": 94,
+      "conflictDetails": {
+        "conflictType": "Task Status & Blocker Divergence",
+        "description": "Document 1 (Sprint 24 Notes) classifies Payment Integration as strictly \"Blocked\", whereas Document 3 (Client Approval) confirms authorization has been granted.",
+        "latestResolution": "Client_Direct_Approval (Oct 28) is chronologically newer than Sprint_24_Meeting_Notes (Oct 24). The newer client update takes precedence.",
+        "conflictingSources": [
+          {
+            "documentName": "Sprint_24_Meeting_Notes.txt",
+            "documentId": "id_vr9rcvz9ymunwaama",
+            "date": "2026-10-24",
+            "claim": "Status: BLOCKED awaiting vendor selection",
+            "excerpt": "Payment integration is blocked until the client confirms the provider."
+          },
+          {
+            "documentName": "Client_Direct_Approval.docx",
+            "documentId": "id_z9710mabhmunwaame",
+            "date": "2026-10-28",
+            "claim": "Status: APPROVED & AUTHORIZED to proceed",
+            "excerpt": "Stripe has been approved as the payment provider for all clinics."
+          }
+        ],
+        "status": "Reviewed"
+      },
+      "sourceReferences": [
+        {
+          "documentId": "id_vr9rcvz9ymunwaama",
+          "documentName": "Sprint_24_Meeting_Notes.txt",
+          "page": 1,
+          "section": "Blockers",
+          "excerpt": "Payment integration is blocked until the client confirms the provider."
+        },
+        {
+          "documentId": "id_z9710mabhmunwaame",
+          "documentName": "Client_Direct_Approval.docx",
+          "page": 1,
+          "section": "Formal Approval",
+          "excerpt": "Stripe has been approved as the payment provider for all clinics."
+        }
+      ]
+    },
+    {
+      "_id": "id_21vwbfj8amunwaaq8",
+      "id": "id_27ux2mlqzmunwaaq8",
+      "createdAt": "2026-09-30T09:20:30.416Z",
+      "updatedAt": "2026-09-30T09:20:30.416Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "insightType": "Fact",
+      "content": "HIPAA Data Encryption standard is set to AES-256 column-level with AWS KMS key management.",
+      "confidence": 99,
+      "sourceReferences": [
+        {
+          "documentId": "id_pptc9wfzfmunwaamg",
+          "documentName": "Architecture_Handoff_Spec.pdf",
+          "page": 1,
+          "section": "Data Persistence Architecture",
+          "excerpt": "All patient consultation records and diagnostic logs must use AES-256 column-level encryption."
+        }
+      ]
+    },
+    {
+      "_id": "id_yh9usnpaumunwaaqa",
+      "id": "id_bvn2mq3f6munwaaqa",
+      "createdAt": "2026-09-30T09:20:30.418Z",
+      "updatedAt": "2026-09-30T09:20:30.418Z",
+      "projectId": "id_n7ysobxvbmunwaam2",
+      "insightType": "Recommendation",
+      "content": "Prioritize SureScripts credential acquisition to prevent E-Prescription sprint delays after the Stripe release on Nov 15.",
+      "confidence": 88,
+      "evidenceChain": {
+        "evidence": "Sprint 24 notes specify lack of sandbox credentials for SureScripts bridge.",
+        "interpretation": "Third-party medical API on-boarding normally takes 2-3 weeks; awaiting until December will miss the sprint deadline.",
+        "currentContext": "E-Prescription is scheduled for Dec 01 but is currently Not Started.",
+        "actionableStep": "Incoming team member should email Dr. Harrison this week for API credentials."
+      },
+      "sourceReferences": [
+        {
+          "documentId": "id_vr9rcvz9ymunwaama",
+          "documentName": "Sprint_24_Meeting_Notes.txt",
+          "page": 1,
+          "section": "Meeting Summary",
+          "excerpt": "Elena noted that we still lack sandbox API credentials for the external pharmacy bridge."
+        }
+      ]
+    }
+  ]
+}
