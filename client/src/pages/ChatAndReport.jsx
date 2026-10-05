@@ -19,21 +19,35 @@ import {
   AlertTriangle,
   ArrowRight,
   Tv,
-  HelpCircle
+  HelpCircle,
+  Trash2
 } from 'lucide-react';
+
+const CHAT_HISTORY_KEY = 'aih_chat_history_v1';
+
+const welcomeMessage = {
+  sender: 'assistant',
+  text: "Hello! I am your AI Project Handoff Assistant. Ask me anything about current status, tasks, blockers, decisions, or timelines grounded strictly in this project's uploaded documents.",
+  sources: []
+};
+const initialChatMessages = [welcomeMessage];
+
+function loadChatHistories() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CHAT_HISTORY_KEY) || '{}');
+    return saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {};
+  } catch {
+    return {};
+  }
+}
 
 export default function ChatAndReport() {
   const { id } = useParams();
   const { openSourceInspector, activeProject } = useOutletContext();
 
   const [activeSubTab, setActiveSubTab] = useState('chat'); // chat, report
-  const [messages, setMessages] = useState([
-    {
-      sender: 'assistant',
-      text: "Hello! I am your AI Project Handoff Assistant. Ask me anything about current status, tasks, blockers, decisions, or timelines grounded strictly in this project's uploaded documents.",
-      sources: []
-    }
-  ]);
+  const [chatHistories, setChatHistories] = useState(loadChatHistories);
+  const messages = chatHistories[id] || initialChatMessages;
   const [inputQuery, setInputQuery] = useState('');
   const [sending, setSending] = useState(false);
 
@@ -42,6 +56,25 @@ export default function ChatAndReport() {
   const [loadingReport, setLoadingReport] = useState(false);
 
   const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(chatHistories));
+    } catch (err) {
+      console.warn('Could not save chat history:', err.message);
+    }
+  }, [chatHistories]);
+
+  const appendChatMessage = (message) => {
+    setChatHistories((previous) => ({
+      ...previous,
+      [id]: [...(previous[id] || [welcomeMessage]), message]
+    }));
+  };
+
+  const clearChatHistory = () => {
+    setChatHistories((previous) => ({ ...previous, [id]: [welcomeMessage] }));
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -76,7 +109,7 @@ export default function ChatAndReport() {
     if (!textToSend || textToSend.trim() === '') return;
 
     const userMessage = { sender: 'user', text: textToSend, sources: [] };
-    setMessages((prev) => [...prev, userMessage]);
+    appendChatMessage(userMessage);
     setInputQuery('');
     setSending(true);
 
@@ -84,26 +117,20 @@ export default function ChatAndReport() {
       // Primary backend grounded query
       const res = await api.post(`/projects/${id}/chat`, { message: textToSend });
       if (res.data?.success) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            sender: 'assistant',
-            text: res.data.data.message,
-            sources: res.data.data.sources || []
-          }
-        ]);
+        appendChatMessage({
+          sender: 'assistant',
+          text: res.data.data.message,
+          sources: res.data.data.sources || []
+        });
       }
     } catch (err) {
       // Client-side AI fallback simulation
       const fallbackAns = await aiService.answerProjectQuery(textToSend, activeProject);
-      setMessages((prev) => [
-        ...prev,
-        {
-          sender: 'assistant',
-          text: fallbackAns.answer,
-          sources: fallbackAns.sources || []
-        }
-      ]);
+      appendChatMessage({
+        sender: 'assistant',
+        text: fallbackAns.answer,
+        sources: fallbackAns.sources || []
+      });
     } finally {
       setSending(false);
     }
@@ -178,7 +205,8 @@ export default function ChatAndReport() {
       {activeSubTab === 'chat' && (
         <div className="space-y-4 max-w-4xl mx-auto">
           {/* Quick Prompts */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap items-center gap-2">
             <span className="text-[11px] text-slate-400 flex items-center gap-1 mr-1">
               <Sparkles className="w-3 h-3 text-indigo-400" />
                 Try asking:
@@ -193,6 +221,17 @@ export default function ChatAndReport() {
                 "{q}"
               </button>
             ))}
+            </div>
+            <button
+              type="button"
+              onClick={clearChatHistory}
+              disabled={sending || messages.length <= 1}
+              className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-slate-200 px-2.5 text-[11px] font-medium text-slate-600 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+              title="Clear this project's chat history"
+            >
+              <Trash2 className="h-3.5 w-3.5" />
+              <span>Clear history</span>
+            </button>
           </div>
 
           {/* Chat Messages Log */}
