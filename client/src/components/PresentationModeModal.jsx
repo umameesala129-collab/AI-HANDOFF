@@ -15,7 +15,7 @@ import {
   FileCheck
 } from 'lucide-react';
 
-export default function PresentationModeModal({ isOpen, onClose, projectData }) {
+export default function PresentationModeModal({ isOpen, onClose }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!isOpen) return null;
@@ -27,21 +27,21 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <FileQuestion className="w-8 h-8 text-amber-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base text-slate-300 leading-relaxed">
-            When a team member leaves or takes over an existing project, critical context is fractured across scattered meeting notes, task spreadsheets, client emails, and technical specifications.
+          <p className="max-w-3xl text-base leading-relaxed text-slate-600">
+            Project knowledge gets scattered across notes, task lists, client messages, and technical files.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
             <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
-              <h4 className="font-semibold text-rose-400 text-sm mb-1">Time Sink</h4>
-              <p className="text-xs text-slate-400">Incoming engineers spend weeks reading disjointed documents trying to reconstruct what happened.</p>
+              <h4 className="mb-1 text-sm font-semibold text-rose-700">Lost time</h4>
+              <p className="text-xs text-slate-600">New teammates have to piece the story together from scratch.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
-              <h4 className="font-semibold text-amber-400 text-sm mb-1">Conflicting Facts</h4>
-              <p className="text-xs text-slate-400">Old sprint notes state tasks are blocked, while newer client emails confirm approval was granted.</p>
+              <h4 className="mb-1 text-sm font-semibold text-amber-700">Mixed signals</h4>
+              <p className="text-xs text-slate-600">Older notes can conflict with newer decisions.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
-              <h4 className="font-semibold text-cyan-400 text-sm mb-1">Lost Rationale</h4>
-              <p className="text-xs text-slate-400">Why was a database or vendor chosen? The reasoning is lost without source traceability.</p>
+              <h4 className="mb-1 text-sm font-semibold text-cyan-700">Missing reasons</h4>
+              <p className="text-xs text-slate-600">Important choices lose meaning when the source is hard to find.</p>
             </div>
           </div>
         </div>
@@ -53,8 +53,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <Files className="w-8 h-8 text-indigo-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base text-slate-300 leading-relaxed">
-            AI Handoff accepts raw multi-format project artifacts (PDF, DOCX, TXT, CSV) without requiring manual formatting or data restructuring.
+          <p className="max-w-3xl text-base leading-relaxed text-slate-600">
+            Add common project files. Their text and source details stay together for review.
           </p>
           <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-2">
             <div className="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800 pb-2 font-mono">
@@ -87,8 +87,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <Cpu className="w-8 h-8 text-cyan-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base text-slate-300 leading-relaxed">
-            The platform compares information across documents to establish the <strong className="text-cyan-400">Evidence → AI Interpretation → Current Context</strong> relationship, detecting contradicting statuses.
+          <p className="max-w-3xl text-base leading-relaxed text-slate-600">
+            Compare updates over time to see what changed and which source takes precedence.
           </p>
           <div className="p-4 rounded-xl bg-gradient-to-r from-slate-900 to-indigo-950/50 border border-indigo-500/30 space-y-3">
             <div className="flex items-center gap-2 text-xs font-semibold text-indigo-400 uppercase tracking-wider">
@@ -118,8 +118,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <Compass className="w-8 h-8 text-emerald-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-base text-slate-300 leading-relaxed">
-            Instead of a bare chatbot, the system creates a structured Command Center with verified situation reports and AI health indicators.
+          <p className="max-w-3xl text-base leading-relaxed text-slate-600">
+            Bring current status, readiness, and supporting evidence into one overview.
           </p>
           <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
@@ -155,8 +155,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <Calendar className="w-8 h-8 text-amber-400" />,
       content: (
         <div className="space-y-3">
-          <p className="text-sm text-slate-300">
-            Every major project event is mapped on a visual timeline linked back to the exact document excerpt.
+          <p className="max-w-3xl text-sm leading-relaxed text-slate-600">
+            Follow key events in order and open the source behind each one.
           </p>
           <div className="space-y-2 text-xs">
             <div className="p-2.5 rounded-lg bg-slate-800/80 border-l-4 border-indigo-500 flex justify-between items-center">
@@ -190,8 +190,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <Layers className="w-8 h-8 text-purple-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-sm text-slate-300">
-            New team members can inspect why architectural choices were made without searching Slack threads or email archives.
+          <p className="max-w-3xl text-sm leading-relaxed text-slate-600">
+            Keep the reasoning behind important project choices easy to find.
           </p>
           <div className="p-4 rounded-xl bg-slate-900 border border-slate-700 space-y-2">
             <h4 className="font-semibold text-white text-sm">Decision: Adopt Stripe as Primary Healthcare Payment Gateway</h4>
@@ -209,8 +209,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <AlertTriangle className="w-8 h-8 text-amber-500" />,
       content: (
         <div className="space-y-4">
-          <p className="text-sm text-slate-300">
-            Active blockers are highlighted with concrete suggested actions rather than leaving incoming developers guessing.
+          <p className="max-w-3xl text-sm leading-relaxed text-slate-600">
+            Make active blockers visible, with a practical next step beside each one.
           </p>
           <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
             <div className="flex items-center justify-between">
@@ -231,8 +231,8 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
       icon: <ArrowRightCircle className="w-8 h-8 text-indigo-400" />,
       content: (
         <div className="space-y-4">
-          <p className="text-sm text-slate-300">
-            Clear, prioritized next steps are generated with direct evidence and assigned accountability.
+          <p className="max-w-3xl text-sm leading-relaxed text-slate-600">
+            Give the next owner a short list of work, people, and dates to pick up.
           </p>
           <div className="space-y-2 text-xs">
             <div className="p-3 rounded-lg bg-indigo-950/40 border border-indigo-500/30">
@@ -257,15 +257,15 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
             <FileCheck className="w-8 h-8 text-emerald-400" />
           </div>
           <h4 className="text-lg font-bold text-white">Full Structured Handoff Package Generated</h4>
-          <p className="text-sm text-slate-300 max-w-lg mx-auto">
-            The incoming team member receives a complete, printable, source-cited executive handoff report covering all deliverables, timelines, decisions, and grounded AI QA.
+          <p className="mx-auto max-w-lg text-sm leading-relaxed text-slate-600">
+            Bring project status, decisions, sources, and next steps into one shareable report.
           </p>
           <div className="pt-2">
             <button
               onClick={onClose}
               className="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-medium text-white transition shadow-lg shadow-indigo-600/30 text-sm"
             >
-              Explore Live System
+              Open the workspace
             </button>
           </div>
         </div>
@@ -279,62 +279,64 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Presentation Mode: AI Handoff Walkthrough"
-      subtitle={`${slide.step} of 9 — Executive & Stakeholder Walkthrough`}
-      maxWidth="max-w-4xl"
+      title="Project walkthrough"
+      subtitle={`Step ${String(currentSlide + 1).padStart(2, '0')} of 09`}
+      maxWidth="max-w-5xl"
     >
-      <div className="space-y-6">
+      <div className="space-y-5 sm:space-y-6">
         {/* Stepper bar */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+        <nav aria-label="Presentation steps" className="flex items-center gap-1 overflow-x-auto pb-1">
           {slides.map((s, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
-              className={`h-2 flex-1 rounded-full transition-all ${
-                idx === currentSlide
-                  ? 'bg-indigo-500'
-                  : idx < currentSlide
-                  ? 'bg-emerald-500/70'
-                  : 'bg-slate-800'
-              }`}
+              aria-label={`Go to step ${idx + 1}: ${s.step}`}
+              aria-current={idx === currentSlide ? 'step' : undefined}
               title={s.step}
-            />
+              className={`flex h-7 min-w-7 flex-1 items-center justify-center rounded-md border text-[9px] font-semibold transition-colors ${
+                idx === currentSlide
+                  ? 'border-[#285d4a] bg-[#285d4a] text-white'
+                  : idx < currentSlide
+                  ? 'border-[#bfd3c5] bg-[#e6efe6] text-[#315c4d]'
+                  : 'border-slate-200 bg-slate-50 text-slate-500 hover:bg-slate-100'
+              }`}
+            >
+              {String(idx + 1).padStart(2, '0')}
+            </button>
           ))}
-        </div>
+        </nav>
 
         {/* Slide Header */}
-        <div className="flex items-center gap-4 border-b border-slate-800 pb-4">
-          <div className="p-3 rounded-2xl bg-slate-800/80 border border-slate-700">
+        <div className="flex items-start gap-3 border-b border-slate-200 pb-4 sm:items-center sm:gap-4">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-100 sm:h-12 sm:w-12">
             {slide.icon}
           </div>
-          <div>
-            <span className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">{slide.step}</span>
-            <h3 className="text-xl font-bold text-white mt-0.5">{slide.title}</h3>
+          <div className="min-w-0">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#8b6840]">{slide.step.replace(/^\d+\.\s*/, '')}</span>
+            <h3 className="mt-0.5 font-serif text-xl font-semibold leading-tight text-slate-900 sm:text-2xl">{slide.title}</h3>
           </div>
         </div>
 
         {/* Slide Content */}
-        <div className="min-h-[220px]">
+        <div key={currentSlide} className="min-h-[180px] max-h-[32vh] overflow-y-auto animate-in fade-in slide-in-from-bottom-1 duration-200 sm:max-h-[42vh]">
           {slide.content}
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex items-center justify-between pt-4 border-t border-slate-800">
+        <div className="flex items-center justify-between gap-3 border-t border-slate-200 pt-4">
           <button
             onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
             disabled={currentSlide === 0}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition ${
+            className={`inline-flex min-h-10 items-center gap-1.5 rounded-md border px-3 text-xs font-semibold transition ${
               currentSlide === 0
-                ? 'opacity-40 cursor-not-allowed text-slate-500'
-                : 'text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700'
+                ? 'cursor-not-allowed border-slate-200 text-slate-400 opacity-60'
+                : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
             }`}
           >
-            <ChevronLeft className="w-4 h-4" /> Previous
+            <ChevronLeft className="h-4 w-4" /> Previous
           </button>
 
-          <span className="text-xs text-slate-400">
-            Slide {currentSlide + 1} of {slides.length}
-          </span>
+          <span aria-live="polite" className="text-xs tabular-nums text-slate-500">{currentSlide + 1} / {slides.length}</span>
 
           <button
             onClick={() => {
@@ -344,11 +346,11 @@ export default function PresentationModeModal({ isOpen, onClose, projectData }) 
                 onClose();
               }
             }}
-            className="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-sm font-medium text-white transition shadow-md shadow-indigo-600/20"
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-md bg-[#285d4a] px-4 text-xs font-semibold text-white transition hover:bg-[#1f4a3b]"
           >
             {currentSlide < slides.length - 1 ? (
               <>
-                Next <ChevronRight className="w-4 h-4" />
+                Next <ChevronRight className="h-4 w-4" />
               </>
             ) : (
               'Finish Walkthrough'
